@@ -41,6 +41,7 @@
     <Compile Include="Composites\Selector.cs" />
     <Compile Include="Composites\Sequence.cs" />
     <Compile Include="Decorators\Decorator.cs" />
+    <Compile Include="Decorators\Inverter.cs" />
     <Compile Include="Decorators\Limit.cs" />
     <Compile Include="Decorators\UntilFail.cs" />
   </ItemGroup>

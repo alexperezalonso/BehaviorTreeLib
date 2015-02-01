@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BehaviorTreeLib
+namespace BehaviorTreeLib.Action
 {
     public enum ActionStatus
     {
@@ -50,8 +50,11 @@ namespace BehaviorTreeLib
         /// <summary>
         /// 
         /// </summary>
-        public LatentAction()
+        public LatentAction(BehaviorActionDelegate OnStart, BehaviorActionDelegate OnRun,
+            BehaviorActionDelegate OnAbort, BehaviorActionDelegate OnStop)
         {
+            _OnStart = OnStart; _OnRun = OnRun; _OnAbort = OnAbort; _OnStop = OnStop;
+
             _status = ActionStatus.READY;
             _stopping = false;
         }

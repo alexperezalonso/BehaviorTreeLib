@@ -32,14 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ActionNode.cs" />
+    <Compile Include="Actions\ActionNode.cs" />
     <Compile Include="BehaviorTreeNode.cs" />
-    <Compile Include="Selector.cs" />
-    <Compile Include="Sequence.cs" />
+    <Compile Include="Actions\LatentAction.cs" />
+    <Compile Include="Composites\NonDeterministicSelector.cs" />
+    <Compile Include="Composites\NonDeterministicSequence.cs" />
+    <Compile Include="Composites\RandomSelector.cs" />
+    <Compile Include="Composites\Selector.cs" />
+    <Compile Include="Composites\Sequence.cs" />
+    <Compile Include="Decorators\Decorator.cs" />
+    <Compile Include="Decorators\Limit.cs" />
+    <Compile Include="Decorators\UntilFail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

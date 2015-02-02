@@ -35,7 +35,6 @@ namespace BehaviorTreeLib.Decorators
         public override void Init()
         {
             _children[0].Init();
-            _count = 0;
         }
 
         public override BehaviorReturnCode Run()

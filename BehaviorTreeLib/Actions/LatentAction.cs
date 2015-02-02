@@ -89,7 +89,10 @@ namespace BehaviorTreeLib.Action
             {
                 // Paramos y decimos que ya no hay que volver a ejecutar OnStop
                 _OnStop();
+                ActionStatus auxStatus = _status;
+                _status = ActionStatus.READY;
                 _stopping = false;
+                return auxStatus;
             }
             return _status;
         }

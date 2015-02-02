@@ -13,6 +13,11 @@ namespace BehaviorTreeLib.Action
 
         LatentAction _action;
 
+        public ActionNode(LatentAction action)
+        {
+            _action = action;
+
+        }
         public override void Init()
         {
             if (_action.Status != ActionStatus.READY)

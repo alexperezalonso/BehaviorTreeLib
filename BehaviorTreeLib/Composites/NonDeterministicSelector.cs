@@ -5,7 +5,6 @@ namespace BehaviorTreeLib.Composite
 {
     class NonDeterministicSelector : Selector
     {
-        private int _currentPosition;
 
         /// <summary>
         /// 
@@ -23,6 +22,17 @@ namespace BehaviorTreeLib.Composite
         public NonDeterministicSelector(List<BehaviorTreeNode> children)
         {
             _children = children;
+            _currentPosition = -1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="children"></param>
+        public NonDeterministicSelector(params BehaviorTreeNode[] children)
+        {
+            _children = new List<BehaviorTreeNode>();
+            _children.AddRange(children);
             _currentPosition = -1;
         }
 

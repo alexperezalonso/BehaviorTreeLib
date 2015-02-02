@@ -5,7 +5,7 @@ namespace BehaviorTreeLib.Composite
 {
     public class Sequence : BehaviorTreeNode
     {
-        private int _currentPosition;
+        protected int _currentPosition;
 
         /// <summary>
         /// 
@@ -23,6 +23,17 @@ namespace BehaviorTreeLib.Composite
         public Sequence(List<BehaviorTreeNode> children)
         {
             _children = children;
+            _currentPosition = -1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="children"></param>
+        public Sequence(params BehaviorTreeNode[] children)
+        {
+            _children = new List<BehaviorTreeNode>();
+            _children.AddRange(children);
             _currentPosition = -1;
         }
 

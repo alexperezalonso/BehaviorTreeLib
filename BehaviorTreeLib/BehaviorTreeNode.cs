@@ -17,6 +17,15 @@ namespace BehaviorTreeLib
         protected BehaviorReturnCode ReturnCode;
 
         public BehaviorTreeNode() { }
+        public void Add(BehaviorTreeNode child)
+        {
+            _children.Add(child);
+        }
+        public void AddRange(params BehaviorTreeNode[] children)
+        {
+            _children.AddRange(children);
+        }
+
         public abstract void Init();
         public abstract BehaviorReturnCode Run();
     }

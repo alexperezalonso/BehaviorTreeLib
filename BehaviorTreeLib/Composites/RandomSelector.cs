@@ -23,6 +23,17 @@ namespace BehaviorTreeLib.Composite
             _currentPosition = -1;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="children"></param>
+        public RandomSelector(params BehaviorTreeNode[] children)
+        {
+            _children = new List<BehaviorTreeNode>();
+            _children.AddRange(children);
+            _currentPosition = -1;
+        }
+
         // <summary>
         /// 
         /// </summary>

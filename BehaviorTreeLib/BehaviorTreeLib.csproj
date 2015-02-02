@@ -44,6 +44,7 @@
     <Compile Include="Decorators\Inverter.cs" />
     <Compile Include="Decorators\Limit.cs" />
     <Compile Include="Decorators\UntilFail.cs" />
+    <Compile Include="TestMain.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

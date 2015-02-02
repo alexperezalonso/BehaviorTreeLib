@@ -15,6 +15,7 @@ namespace BehaviorTreeLib.Decorators
         public Limit(int runLimit)
         {
             _children = new List<BehaviorTreeNode>(1);
+            _runLimit = runLimit;
             _count = 0;
         }
 
@@ -27,6 +28,7 @@ namespace BehaviorTreeLib.Decorators
         {
             _children = new List<BehaviorTreeNode>(1);
             _children.Add(child);
+            _runLimit = runLimit;
             _count = 0;
         }
 

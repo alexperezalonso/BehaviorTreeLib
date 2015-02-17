@@ -1,5 +1,5 @@
-﻿using BehaviorTreeLib.Composite;
-using BehaviorTreeLib.Action;
+﻿using BehaviorTreeLib.Composites;
+using BehaviorTreeLib.Actions;
 using BehaviorTreeLib.Decorators;
 using System;
 using System.Collections.Generic;
@@ -53,7 +53,7 @@ namespace BehaviorTreeLib
 
             /*** Behavior Tree ***/
             BehaviorTreeNode bt = new Selector(
-                new Sequence(
+                new Parallel(FailurePolicy.FAIL_ON_ALL, SuccessPolicy.SUCCEED_ON_ALL,
                     new ActionNode(actionA),
                     new ActionNode(actionB)),
                 new Selector(

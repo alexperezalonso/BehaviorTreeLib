@@ -82,9 +82,7 @@ namespace BehaviorTreeLib.Composites
             if (_children.Count > _childrenStatus.Count)
             {
                 for (int i = _childrenStatus.Count; i < _children.Count; i++)
-                {
                     _childrenStatus.Add(BehaviorReturnCode.BT_RUNNING);
-                }
             }
             setChildrenStatus(BehaviorReturnCode.BT_RUNNING);
         }
@@ -159,9 +157,7 @@ namespace BehaviorTreeLib.Composites
                 return BehaviorReturnCode.BT_SUCCESS;
             }
             else
-            {
                 return BehaviorReturnCode.BT_RUNNING;
-            }
         }
     }
 }

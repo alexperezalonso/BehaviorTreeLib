@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BehaviorTreeLib.Composite
+namespace BehaviorTreeLib.Composites
 {
     public class NonDeterministicSequence : Sequence
     {

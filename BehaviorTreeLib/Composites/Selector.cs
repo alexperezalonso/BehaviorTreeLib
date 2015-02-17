@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace BehaviorTreeLib.Composite
+namespace BehaviorTreeLib.Composites
 {
     public class Selector : BehaviorTreeNode
     {

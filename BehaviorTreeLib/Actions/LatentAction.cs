@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BehaviorTreeLib.Actions
 {
@@ -39,6 +36,25 @@ namespace BehaviorTreeLib.Actions
         private BehaviorActionDelegate _OnStart, _OnRun, _OnAbort, _OnStop;
         private bool _stopping;
 
+        #region Properties BehaviorActionDelegate setters
+        public BehaviorActionDelegate OnStart
+        {
+            set { _OnStart = value; }
+        }
+        public BehaviorActionDelegate OnRun
+        {
+            set { _OnRun = value; }
+        }
+        public BehaviorActionDelegate OnAbort
+        {
+            set { _OnAbort = value; }
+        }
+        public BehaviorActionDelegate OnStop
+        {
+            set { _OnStop = value; }
+        }
+        #endregion
+
         /// <summary>
         /// Return the current status (READY, RUNNING, SUSPEND, SUCCESS, FAIL)
         /// </summary>
@@ -54,6 +70,18 @@ namespace BehaviorTreeLib.Actions
             BehaviorActionDelegate OnAbort, BehaviorActionDelegate OnStop)
         {
             _OnStart = OnStart; _OnRun = OnRun; _OnAbort = OnAbort; _OnStop = OnStop;
+
+            _status = ActionStatus.READY;
+            _stopping = false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public LatentAction(BaseAction action)
+        {
+            _OnStart = action.OnStart; _OnRun = action.OnRun;
+            _OnAbort = action.OnAbort; _OnStop = action.OnStop;
 
             _status = ActionStatus.READY;
             _stopping = false;

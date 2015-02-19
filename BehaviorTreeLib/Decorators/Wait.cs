@@ -20,7 +20,7 @@ namespace BehaviorTreeLib.Decorators
 
         public override void Init()
         {
-
+            _count = 0;
         }
 
         public override BehaviorReturnCode Run()
@@ -29,7 +29,7 @@ namespace BehaviorTreeLib.Decorators
 
             if (_count >= _waitTime)
             {
-                _count = 0;
+
                 return _children[0].Run();
             }
 

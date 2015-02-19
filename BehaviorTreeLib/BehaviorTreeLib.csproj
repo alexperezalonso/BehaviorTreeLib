@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Actions\ActionNode.cs" />
+    <Compile Include="Actions\BaseAction.cs" />
     <Compile Include="BehaviorTreeNode.cs" />
     <Compile Include="Actions\LatentAction.cs" />
     <Compile Include="Composites\NonDeterministicSelector.cs" />
